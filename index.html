@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rea Mercolita</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer>
+    function toggleMenu(button) {
+      const nav = button.nextElementSibling;
+      nav.classList.toggle('open');
+    }
+  </script>
+</head>
+<body>
+
+ 
+  <section class="home">
+    <div class="container">
+      <div class="info">
+        <h1>Rea Mercolita</h1>
+        <p class="subtitle">Aspiring <span class="highlight">Web Developer</span> from Philippines</p>
+
+        
+        <button class="menu-toggle" onclick="toggleMenu(this)">☰</button>
+        <nav class="nav">
+          <a href="#" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="files/Mercolita-CV.pdf" target="_blank">Resume</a>
+          <a href="Portfolio.html">Portfolio</a>
+          <a href="contacts.html">Contacts</a>
+        </nav>
+      </div>
+
+      <img src="img/ID.png" alt="My Logo" id="my-logo" />
+    </div>
+  </section>
+
+ 
+ <section id="about">
+  <header class="about-header">
+    <div class="logo">Rea Mercolita</div>
+    <button class="menu-toggle" onclick="toggleMenu(this)">☰</button>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#about" class="active">About</a>
+      <a href="files/Mercolita-CV.pdf" target="_blank">Resume</a>
+      <a href="Portfolio.html">Portfolio</a>
+      <a href="contacts.html">Contacts</a>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <h2>ABOUT ME <span class="line"></span></h2>
+    <div class="about-content">
+      <img src="img/photo.png" alt="Professional Photo" class="about-img" />
+      <div class="about-text">
+        <h3>IT Student | Aspiring Web Developer</h3>
+        <p class="intro">
+          <em>Hello, I am Rea Mercolita! I'm an Information Technology student with a passion for learning and creating solutions through technology. I enjoy exploring different areas of IT, from programming and web development to networking and system administration. My goal is to keep growing my skills and build projects that make a positive impact. Welcome to my portfolio—feel free to explore my work and connect with me.</em>
+        </p>
+        <div class="info-columns">
+          <div>
+            <p><span class="label">› Phone:</span> +63 993 569 8499</p>
+            <p><span class="label">› City:</span> Manila City, Metro Manila</p>
+          </div>
+          <div>
+            <p><span class="label">› College Level:</span> 2nd year college</p>
+            <p><span class="label">› E-mail:</span> reamercolita1994@gmail.com</p>
+          </div>
+        </div>
+        <p class="story">
+          When I was a child, I wanted to be a chef because I really loved cooking for others—that has always been my love language. But when I reached high school, I discovered that I also had a strong interest in Information Technology. I realized that as time goes on, technology continues to grow and expand, offering more opportunities and promising careers with competitive salaries. That’s why I decided to take BSIT in college. And guess what? I got into my dream university with my dream course!
+        </p>
+      </div>
+    </div>
+  </section>
+</section>
+
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("open");
+  }
+
+  // Close the menu when a link is clicked (optional for better UX)
+  document.querySelectorAll(".nav a").forEach((link) => {
+    link.addEventListener("click", () => {
+      const nav = document.querySelector(".nav");
+      nav.classList.remove("open");
+    });
+  });
+</script>
+
+</body>
+</html>
