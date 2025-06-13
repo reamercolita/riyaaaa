@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rea Mercolita | Portfolio</title>
+  <link rel="stylesheet" href="css/contacts.css" />
+</head>
+<body>
+  <header>
+    <h1>Rea Mercolita</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="files/Mercolita-CV.pdf" target="_blank">Resume</a>
+      <a href="Portfolio.html">Portfolio</a>
+      <a href="#" class="active">Contacts</a>
+    </nav>
+  </header>
+
+<main>
+    <h2>CONTACT ME HERE <span class="line"></span></h2>
+
+<div class="message-card">
+  <h3>Send a Message</h3>
+  <form id="contactForm">
+    
+    <input type="text" id="name" name="name" placeholder="Enter your name" required />
+    
+    
+    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+    
+    
+    <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+    
+    <button type="submit">Send</button>
+  </form>
+  <p id="sentMessage" class="hidden">Your message has been sent successfully!</p>
+</div>
+
+
+    <div class="social-links">
+  <a href="mailto:reamercolita1994@gmail.com?subject=Contact%20Request&body=Hi%20Rea,%20I%20would%20like%20to%20get%20in%20touch." title="Send Email">
+    <img src="img/google.png" alt="Send Email" />
+  </a>
+  <a href="mailto:mercolitars@students.nu-moa.edu.ph" target="_blank" title="Email">
+    <img src="img/outlook.png" alt="Email" />
+  </a>
+  <a href="https://www.linkedin.com/in/rea-mercolita-622487356/" target="_blank" title="LinkedIn">
+    <img src="img/linkedin.png" alt="LinkedIn" />
+  </a>
+  <a href="https://github.com/reamercolita" target="_blank" title="GitHub">
+    <img src="img/github.png" alt="GitHub" />
+  </a>
+  <a href="https://www.facebook.com/reamercolita625" target="_blank" title="Facebook">
+    <img src="img/fb.png" alt="Facebook" />
+  </a>
+  <a href="https://www.instagram.com/eya.urluvs/" target="_blank" title="Instagram">
+    <img src="img/ig.png" alt="Instagram" />
+  </a>
+</div>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", (e) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+    alert("Your message has been sent successfully!");
+    e.target.reset(); // Reset the form fields
+  });
+</script>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav');
+
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+
+</script>
+
+
+
+
+</body>
+</html>
