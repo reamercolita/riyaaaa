@@ -78,18 +78,23 @@
 </section>
 
 <script>
-  function toggleMenu() {
-    const nav = document.querySelector(".nav");
-    nav.classList.toggle("open");
-  }
+  // Select elements
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav');
+const navLinks = document.querySelectorAll('.nav a');
 
-  // Close the menu when a link is clicked (optional for better UX)
-  document.querySelectorAll(".nav a").forEach((link) => {
-    link.addEventListener("click", () => {
-      const nav = document.querySelector(".nav");
-      nav.classList.remove("open");
-    });
+// Toggle menu on button click
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('open'); // Show/hide menu
+});
+
+// Close menu when a navigation link is clicked
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('open'); // Hide menu
   });
+});
+
 </script>
 
 </body>
