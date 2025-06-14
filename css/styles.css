@@ -62,7 +62,7 @@ header {
 }
 
 header .nav {
-  margin-left: auto; /* Push navigation links to the right */
+  margin-left: auto; 
   display: flex;
   gap: 1.5rem;
   list-style: none;
@@ -190,9 +190,9 @@ header .nav {
   max-width: 300px;
   width: 300px;
   height: 300px;
-  object-fit: cover; /* Ensures consistent image size */
+  object-fit: cover; 
   margin-top: 60px;
-  flex-shrink: 0; /* Prevents resizing of the image */
+  flex-shrink: 0; 
 }
 
 .about-text {
