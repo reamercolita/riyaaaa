@@ -1,214 +1,55 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #800020;
-  color: #ffc0cb;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rea Mercolita | Portfolio</title>
+  <link rel="stylesheet" href="css/portfolio.css" />
+</head>
+<body>
+  <header>
+    <h1>Rea Mercolita</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="files/Mercolita-CV.pdf" target="_blank">Resume</a>
+      <a href="#" class="active">Portfolio</a>
+      <a href="contacts.html">Contacts</a>
+    </nav>
+  </header>
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  position: relative;
-}
+  <main>
+    <h2>MY WORKS <span class="line"></span></h2>
+    
+    <div class="container">
+      <div class="card">
+        <h3>SB19 Website</h3>
+         <img src="img/ss3.png" alt="SB19" />
+         <p class="description">The SB19 website is a fan-dedicated platform that showcases the latest updates, achievements, and content about SB19. Built using HTML and CSS, this website provides an interactive and visually appealing space for fans to explore the group’s journey, music, and milestones.</p>
+         <a href="first.html" target="_blank">View Here</a>
+      </div>
+      <div class="card">
+        <h3>Registration Form</h3>
+        <a href="second.html" target="_blank">Registration Form</a>
+        <img src="img/ss2.png" alt="Regis" />
+        <p class="description">The registration form project is a user-friendly interface designed to simplify the sign-up process for educational programs. Developed using HTML, CSS, and JavaScript, it includes fields for selecting courses and programs, ensuring that users can easily provide the required information. </p>
+        <a href="second.html" target="_blank">View Here</a>
+      </div>
+      <div class="card">
+        <h3>Portfolio</h3>
+        <a href="index.html" target="_blank">My Website</a>
+        <img src="img/ss1.png" alt="Portfolio" />
+        <p class="description"> This portfolio website highlights my personal and professional journey, showcasing my skills, projects, and accomplishments. Built using HTML, CSS, and JavaScript, it’s designed to provide a seamless browsing experience, reflecting my dedication to creativity and web development. </p>
+        <a href="index.html" target="_blank">View Here</a>
+      </div>
+    </div>
+  </main>
 
-h1 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-}
-
-/* NAVIGATION */
-.nav {
-  display: flex;
-  gap: 1.5rem;
-}
-
-nav a {
-  color: #ffc0cb;
-  text-decoration: none;
-  font-size: 1.2rem;
-  position: relative;
-}
-
-nav a:hover,
-nav a.active {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-/* HAMBURGER BUTTON */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* MAIN CONTENT */
-main {
-  padding: 40px;
-}
-
-h2 {
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  font-size: 2rem;
-  margin-top: 0;
-}
-
-.line {
-  display: inline-block;
-  width: 140px;
-  height: 2px;
-  background-color: #fff;
-  margin-left: 10px;
-}
-
-.container {
-  display: flex;
-  gap: 50px; /* Increased the gap for more spacing */
-  justify-content: center;
-  align-items: center;
-  margin-top: 10rem;
-  flex-wrap: wrap; /* Ensures responsiveness */
-}
-
-
-.card {
-  background-color: #fff;
-  color: #800020;
-  border: 2px solid #ffc0cb;
-  border-radius: 10px;
-  padding: 40px;
-  text-align: center;
-  width: 200px; /* Set a fixed width */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-top: -7rem;
-  min-height: 300px;
-}
-
-.card .description {
-  font-size: 0.7rem;
-  text-align: justify;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.9), /* Main white glow */
-              0 0 40px 10px rgba(255, 255, 255, 0.7); /* Outer soft glow */
-}
-
-.card img {
-  max-width: 100%; /* Ensures the image doesn't exceed the card's width */
-  max-height: 150px; /* Limits the height of the image */
-  object-fit: cover; /* Ensures the image fits well within its boundaries */
-  border-radius: 8px; /* Adds rounded corners to the image */
-  margin-bottom: 10px; /* Space between image and card content */
-}
-
-
-.card h3 {
-  margin: 10px 0;
-  font-size: 1.2rem;
-  color: #800020;
-}
-
-.card a {
-  text-decoration: none;
-  font-size: 1rem;
-  color: #800020;
-  font-weight: bold;
-  border-bottom: 1px solid #ffc0cb;
-
-}
-
-.card a:hover {
-  color: #800020; /* Contrast text when card background changes */
-  border-color: #fff;
-}
-
-
-/* RESPONSIVE STYLES */
-/* RESPONSIVE STYLES */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .container {
-    margin-top: 2rem;
-    flex-direction: column; /* Stack cards vertically on smaller screens */
-  }
-
-  h1 {
-    font-size: 18px; /* Adjust size for mobile */
-    margin: 0; /* Remove any default margin */
-    text-align: center; /* Center it horizontally */
-  }
-
-  header {
-    padding: 10px 20px; /* Reduce padding for header */
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 40px;
-    background-color: #800020;
-    padding: 1rem;
-    border: 1px solid #ffc0cb;
-    border-radius: 8px;
-    z-index: 999;
-  }
-
-  .nav.open {
-    display: flex;
-  }
-
-  nav a {
-    margin-right: 0;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-  }
-
-  .card {
-    width: 150px; /* Reduce width */
-    padding: 20px; /* Decrease padding */
-    margin-top: 0; /* Remove extra margin */
-    min-height: 220px; /* Adjust height to fit smaller content */
-    font-size: 0.8rem; /* Smaller font size for the card content */
-  }
-
-  .card img {
-    max-height: 100px; /* Reduce image height */
-    margin-bottom: 5px; /* Adjust spacing below image */
-  }
-
-  .card h3 {
-    font-size: 1rem; /* Smaller heading */
-    margin: 5px 0; /* Adjust margin */
-  }
-
-  .card .description {
-    font-size: 0.6rem; /* Smaller description text */
-  }
-
-  .card a {
-    font-size: 0.9rem; /* Adjust link size */
-    margin-top: 5px;
-  }
-}
+  <script>
+    function toggleMenu() {
+      document.querySelector(".nav").classList.toggle("open");
+    }
+  </script>
+</body>
+</html>
