@@ -161,19 +161,13 @@ textarea {
   border-radius: 10px;
 }
 
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 18px;
-    margin: 0 0 3px;
-    text-align: center;
-  }
-
-  header {
-    padding: 10px 20px;
-  }
-
+  footer {
+  background-color: #800020;
+  color: #ffc0cb;
+  padding: 15px 10px;
+  text-align: center;
+  font-size: 0.9rem;
+}
 
   @media (max-width: 768px) {
   .menu-toggle {
@@ -187,6 +181,15 @@ textarea {
     z-index: 1000;
   }
 
+   h1 {
+    font-size: 18px;
+    margin: 0 0 3px;
+    text-align: center;
+  }
+
+  header {
+    padding: 10px 20px;
+  }
   .nav {
     display: none; /* Hidden by default on mobile */
     flex-direction: column;
@@ -213,6 +216,7 @@ textarea {
   h2 {
     font-size: 1.5rem;
     margin: 5px 0;
+    margin-bottom: 30px;
   }
 
   .line {
@@ -249,7 +253,11 @@ textarea {
 
   .social-links {
     margin-top: 20px;
+    margin-bottom: 110px;
   }
-}
 
+    footer {
+    padding: 10px 5px;
+    font-size: 0.8rem;
+  }
 }
